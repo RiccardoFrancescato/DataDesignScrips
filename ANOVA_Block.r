@@ -1,6 +1,7 @@
+#Copyright (c) 2016 Riccardo Francescato
 #data from example page 144
-a = 4
-b = 6
+a = 4 # number of rows 
+b = 6 # number of columns 
 N = a*b 
 alpha = .05
 RawData= c(90.3,89.2, 98.2, 93.9, 87.4, 97.9,92.5, 89.5, 90.6, 94.7, 87.0, 95.8,85.5, 90.8, 89.6, 86.2, 88.0, 93.4,82.5, 89.5, 85.6, 87.4, 78.9, 90.7)
