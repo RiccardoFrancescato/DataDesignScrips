@@ -56,8 +56,8 @@ MSrows = SSrows/(p-1)
 MScols = SScol/(p-1)
 MSerr = SSerr/((p-2)*(p-1))
 
-F0 <- MStreat/MSerr
-Fa <- qf(alpha,df1=a-1,df2=((a-1)*(b-1)),lower.tail=F)
+F0 = MStreat/MSerr
+Fa = qf(alpha,df1=p-1,df2=((p-2)*(p-1)),lower.tail=F)
 
 if(F0 > Fa) print(paste0(" reject H0 ", F0)) else print(paste0(" Accept H0 ", F0))
 cat(paste0(" Treatments  SS: ",SStreat," Df: ", p-1 ," MS: ",MStreat, " F0: ",F0,

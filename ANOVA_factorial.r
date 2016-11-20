@@ -51,10 +51,12 @@ MSe = SSe/(a*b*(n-1))
 F0a = MSa/MSe
 F0b = MSb/MSe
 F0ab = MSab/MSe
-Fa = qf(alpha,df1=a-1,df2=b-1,lower.tail=F)
-cat(paste0(" Treatment A  SS: ",SSa," Df: ", a-1 ," MS: ",MSa, " F0a: ",F0a,
-		"\n Treatment B  SS: ",SSb," Df: ", b-1 ," MS: ",MSb," F0b: ",F0b,
-		"\n Interaction AB  SS: ",SSab," Df: ", (a-1)*(b-1) ," MS: ",MSab," F0ab: ",F0ab,
+Fa = qf(alpha,df1=(a-1),df2=(a*b*(n-1)),lower.tail=F)
+Fb = qf(alpha,df1=(b-1),df2=(a*b*(n-1)),lower.tail=F)
+Fab = qf(alpha,df1=((a-1)*(b-1)),df2=(a*b*(n-1)),lower.tail=F)
+cat(paste0(" Treatment A  SS: ",SSa," Df: ", a-1 ," MS: ",MSa, " F0a: ",F0a," Fa crit: ",Fa,
+		"\n Treatment B  SS: ",SSb," Df: ", b-1 ," MS: ",MSb," F0b: ",F0b," Fb crit: ",Fb,
+		"\n Interaction AB  SS: ",SSab," Df: ", (a-1)*(b-1) ," MS: ",MSab," F0ab: ",F0ab," Fab crit: ",Fab,
 		"\n Error   SS: ",SSe," Df: ",a*b*(n-1) ," MS: ",MSe,
 		"\n Total  SS: ",SStot," Df: ", (a*b*n)-1,
 		"\n Fcrit: ", Fa))
