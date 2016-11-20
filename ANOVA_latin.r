@@ -73,7 +73,6 @@ delivery.df = data.frame(
   Formulation = RawLatin,
   Data = RawData
 )
-delivery.df
 
 delivery.mod1 = lm(Data ~ Formulation+Batches+Opersators, delivery.df)
 anova(delivery.mod1)
