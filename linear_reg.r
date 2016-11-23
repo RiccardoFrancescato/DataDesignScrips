@@ -1,3 +1,4 @@
+#Copyright (c) 2016 Riccardo Francescato
 X = c(10,20,50,100,150,200)
 Y = c(9.4,9.2,9.0,8.5,8.1,7.4)
 alpha = .05

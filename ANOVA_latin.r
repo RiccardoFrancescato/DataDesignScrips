@@ -1,6 +1,7 @@
 #Copyright (c) 2016 Riccardo Francescato
 p = 5 # number of rows 
 N = p^2
+alpha = .05
 RawLatin=c("A","B","C","D","E",
   			"B","C","D","E","A",
   			"C","D","E","A","B",
@@ -12,8 +13,8 @@ RawData = c(-1,-5,-6,-1,-1,
   		   	 1, 6, 1,-2,-3,
   		   	-3, 5,-5, 4, 6)
 
-data = matrix(RawData,nrow=a,ncol=b,byrow = TRUE)        
-latin = matrix(RawLatin,nrow=a,ncol=b,byrow = TRUE)  
+data = matrix(RawData,nrow=p,ncol=p,byrow = TRUE)        
+latin = matrix(RawLatin,nrow=p,ncol=p,byrow = TRUE)  
 
 SStot = sum(data^2) - sum(data)^2/N
 

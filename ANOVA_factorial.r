@@ -58,6 +58,5 @@ cat(paste0(" Treatment A  SS: ",SSa," Df: ", a-1 ," MS: ",MSa, " F0a: ",F0a," Fa
 		"\n Treatment B  SS: ",SSb," Df: ", b-1 ," MS: ",MSb," F0b: ",F0b," Fb crit: ",Fb,
 		"\n Interaction AB  SS: ",SSab," Df: ", (a-1)*(b-1) ," MS: ",MSab," F0ab: ",F0ab," Fab crit: ",Fab,
 		"\n Error   SS: ",SSe," Df: ",a*b*(n-1) ," MS: ",MSe,
-		"\n Total  SS: ",SStot," Df: ", (a*b*n)-1,
+		"\n Total  SS: ",SSt," Df: ", (a*b*n)-1,
 		"\n Fcrit: ", Fa))
-if(F0 > Fa) print(paste0(" reject H0 ", F0)) else print(paste0(" Accept H0 ", F0))

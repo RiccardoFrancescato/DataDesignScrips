@@ -38,8 +38,8 @@ cat(paste0(" Treatments  SS: ",SStreat," Df: ", a-1 ," MS: ",MStreat, " F0: ",F0
 
 
 delivery.df = data.frame(
-  Treatment = c(rep("1", col), rep("2", col), rep("3", col), rep("4", col)),
-  Block = c(rep(c("1", "2", "3", "4","5","6"), row)),
+  Treatment = c(rep("1", b), rep("2", b), rep("3", b), rep("4", b)),
+  Block = c(rep(c("1", "2", "3", "4","5","6"), a)),
   Data = RawData
 )
 delivery.mod1 = lm(Data ~ Treatment+Block, data = delivery.df)
