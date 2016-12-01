@@ -1,6 +1,7 @@
 #Copyright (c) 2016 Riccardo Francescato
 X = c(10,20,50,100,150,200)
 Y = c(9.4,9.2,9.0,8.5,8.1,7.4)
+
 alpha = .05
 SigmaX =  sum( (X - mean(X) )^2 )
 SigmaY = sum( (Y - mean(Y) )^2 )
@@ -24,3 +25,16 @@ if(F0 > Fa) print(paste0(" reject H0 ", F0)) else print(paste0(" Accept H0 ", F0
 cat(paste0(" Regression  SS: ",SSR," Df: ", 1 ," MS: ",MSR, " F0: ",F0,
 		"\n Error  SS: ",SSE," Df: ", (length(X)-2) ," MS: ",MSE,
 		"\n Total  SS: ",SST," Df: ", (length(X)-1)))
+
+
+# Multiple Linear Regression Example 
+fit <- lm(y ~ x1 + x2 + x3, data=mydata)
+summary(fit) # show results
+# Other useful functions 
+coefficients(fit) # model coefficients
+confint(fit, level=0.95) # CIs for model parameters 
+fitted(fit) # predicted values
+residuals(fit) # residuals
+anova(fit) # anova table 
+vcov(fit) # covariance matrix for model parameters 
+influence(fit) # regression diagnostics
